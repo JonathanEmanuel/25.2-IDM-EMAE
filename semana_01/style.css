@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+/* Similares a las Variables */
+:root {
+    --primary: #50BF61;
+    --info: #3D9AE2;
+    --alert: #F28E13;
+    --secondary: gray;
+    --dark: black;
+    --light: #F0F0F0;   
+    --logo-size: 64px;
+}
+
+nav {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav img {
+    width: var(--logo-size);
+}
+
+main {
+    background-color: var(--alert);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+}
+
+/* Consultas de medios */
+
+/* Mobile  425px*/
+
+/* Tablet 768 */
+@media (min-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    main {
+        width: 400px;
+        margin: auto;
+    }
+}
+
+
+/* Desktop 1024px */
+@media (min-width: 1024px) {
+    nav {
+        background-color:var(--alert);
+    }
+}
