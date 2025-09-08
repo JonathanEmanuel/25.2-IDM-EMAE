@@ -1,0 +1,28 @@
+
+/* Similares a las Variables */
+:root {
+    --primary: #50BF61;
+    --info: #3D9AE2;
+    --alert: #F28E13;
+    --secondary: gray;
+    --dark: black;
+    --light: #F0F0F0;   
+    --logo-size: 64px;
+}
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: start;
+}
+
+.logo {
+    width: 64px;
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+}
