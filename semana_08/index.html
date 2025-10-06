@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grillas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-success text-white">
+        <h1>Notas</h1>
+    </header>
+    <main id="app" class="container">
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <h2 v-text="materia"></h2>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alumno</th>
+                            <th>Nota 1</th>
+                            <th>Nota 2</th>
+                            <th>Promedio</th>
+                            <th>Icon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(alumno, index) in alumnos">
+                            <td v-text="alumno.nombre"></td>
+                            <td v-text="alumno.nota1"></td>
+                            <td v-text="alumno.nota2"></td>
+                            <td v-text="alumno.promedio"></td>
+                            <td>
+                                <span v-if="alumno.promedio > 4">😁</span>
+                                <span v-else>😕</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white">
+        <p>EMAE | IDM | 2025</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="notas.js"></script>
+</body>
+</html>
