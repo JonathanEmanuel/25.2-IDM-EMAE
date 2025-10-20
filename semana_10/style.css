@@ -1,0 +1,31 @@
+header {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 75vh;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sort:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(14, 124, 242);
+}
+
+.aprobados {
+    color: #008080;
+}
+
+.desaprobados {
+    color: #ff6347;
+}
